@@ -18,3 +18,16 @@ for (let amount of recipeMap.values()) {
 for (let entry of recipeMap) { // the same as of recipeMap.entries()
   alert(entry); // cucumber,500 (and so on)
 }
+
+
+// So we can create a map from an object like this:
+let obj = {
+  name: "John",
+  age: 30
+};
+
+let map = new Map(Object.entries(obj));
+
+alert( map.get('name') ); // John
+alert(map);
+console.log(map, map.get("name"));
