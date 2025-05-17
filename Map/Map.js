@@ -31,3 +31,17 @@ let map = new Map(Object.entries(obj));
 alert( map.get('name') ); // John
 alert(map);
 console.log(map, map.get("name"));
+
+
+// converting Map to object
+let map1= new Map();
+map.set('banana', 1);
+map.set('orange', 2);
+map.set('meat', 4);
+
+let obj1= Object.fromEntries(map1.entries);// make a plain object (*)
+
+// done!
+// obj = { banana: 1, orange: 2, meat: 4 }
+
+alert(obj1.orange);
