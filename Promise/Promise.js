@@ -19,3 +19,15 @@ promise.then(
 );
 // The first argument of .then is a function that runs when the promise is resolved and receives the result.
 // The second argument of .then is a function that runs when the promise is rejected and receives the error.
+
+
+// example 3
+// .finally()
+var promise= new Promise((resolve, reject) => {
+  setTimeout(() => resolve("Success!"), 1000);
+});
+
+promise
+  .then(result => console.log("✅", result))
+  .catch(error => console.log("❌", error))
+  .finally(() => console.log("🔚 Promise finished."));
