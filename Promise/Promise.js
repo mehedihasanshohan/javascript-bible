@@ -10,3 +10,12 @@ let promise = new Promise((resolve, reject) => {
 });
 
 promise.then(result => console.log(result)); // Output: ✅ Done
+
+// example-2
+// use of .then
+promise.then(
+  function(result) { /* handle a successful result */ },
+  function(error) { /* handle an error */ }
+);
+// The first argument of .then is a function that runs when the promise is resolved and receives the result.
+// The second argument of .then is a function that runs when the promise is rejected and receives the error.
