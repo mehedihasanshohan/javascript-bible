@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 30px;
+  background-color: #f0f0f0;
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#user-img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
