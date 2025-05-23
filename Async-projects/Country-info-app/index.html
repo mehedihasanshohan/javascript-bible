@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Country Info App</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
     <h1>🌍 Country Info Finder</h1>
-    <input type="text" id="countryInput" placeholder="Enter country name..." />
-    <button onclick="getCountryData()">Search</button>
 
+    <form onsubmit="getCountryData(); return false;">
+      <input type="text" id="countryInput" placeholder="Enter country name..." />
+      <button type="submit">Search</button>
+    </form>
+
+    <div id="loader" class="loader" style="display: none;"></div>
     <div id="result" class="card"></div>
   </div>
 

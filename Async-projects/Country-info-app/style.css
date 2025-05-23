@@ -9,7 +9,7 @@ body {
 .container {
   max-width: 600px;
   margin: auto;
-  background: rgba(0,0,0,0.2);
+  background: rgba(0, 0, 0, 0.2);
   padding: 20px;
   border-radius: 10px;
 }
@@ -31,10 +31,38 @@ button {
   border-radius: 5px;
 }
 
+/* Loader Spinner */
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #222;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 20px auto;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 .card {
   margin-top: 20px;
   background: white;
   color: black;
   padding: 20px;
   border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  input, button {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+  }
 }

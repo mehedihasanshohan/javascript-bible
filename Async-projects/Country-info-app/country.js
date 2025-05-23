@@ -1,8 +1,13 @@
 async function getCountryData() {
   const countryName = document.getElementById("countryInput").value.trim();
   const resultDiv = document.getElementById("result");
+  const loader = document.getElementById("loader");
+
+  resultDiv.innerHTML = "";
+  loader.style.display = "block"; // SHOW loader
 
   if (!countryName) {
+    loader.style.display = "none";
     resultDiv.innerHTML = "<p>Please enter a country name.</p>";
     return;
   }
@@ -28,5 +33,7 @@ async function getCountryData() {
     `;
   } catch (error) {
     resultDiv.innerHTML = `<p>❌ ${error.message}</p>`;
+  } finally {
+    loader.style.display = "none"; // HIDE loader
   }
 }
