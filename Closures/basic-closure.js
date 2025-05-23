@@ -10,3 +10,13 @@ function outer() {
 
 const fn = outer();
 fn(); // Output: Shohan
+
+
+// LexicalEnvironment here
+// LexicalEnvironment {
+//   EnvironmentRecord: {
+//     name: "Shohan",
+//     inner: <function>
+//   },
+//   Outer: GlobalLexicalEnvironment
+// }
