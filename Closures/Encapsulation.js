@@ -1,13 +1,18 @@
-function counter() {
-  let count = 0;
 
-  return function () {
-    count++;
-    console.log(count);
-  };
-}
-
-const inc = counter();
-inc(); // 1
-inc(); // 2
-inc(); // 3
+  function createCounter() {
+    let count = 0;
+  
+    return {
+      increment: function () {
+        count++;
+      },
+      getCount: function () {
+        return count;
+      }
+    };
+  }
+  
+  const counter = createCounter();
+  counter.increment();
+  console.log(counter.getCount()); // 1
+  console.log(counter.count); // undefined ❌
