@@ -1,6 +1,6 @@
 # 📖 JavaScript Bible
 
-Welcome to the **JavaScript Bible**, your ultimate 100-day journey from fundamentals to professional mastery. This repo is crafted with ❤️ and discipline to help build a rock-solid JavaScript foundation.
+Welcome to the **JavaScript Bible**, ultimate 100-day journey from fundamentals to professional mastery. This repo is crafted with ❤️ and discipline to help build a rock-solid JavaScript foundation.
 
 ---
 
@@ -40,6 +40,12 @@ This repo is part of a **100-day challenge** to deeply learn and master JavaScri
 - `Conditionals`, `Loops`, `Functions`
 - `Arrow functions`, `Objects`, `Arrays`
 - `DOM Manipulation`, `Events`, `Forms`
+- `Debounce`, `Throttle`
+- `Callback queue`, `Microtask queue`, `Macrotask queue`, `Event loop`
+- `Closure`, `Currying`, `Private variable`, `Encapsulation`
+- `Promise`, `Promise Methods`, `Async-await`, `try...catch`
+- `Hoisting`, `functional hoisting`
+- `Garbase collection`, `mark and sweep method`
 
 ---
 
@@ -108,7 +114,6 @@ This repo is part of a **100-day challenge** to deeply learn and master JavaScri
 - [MDN Web Docs](https://developer.mozilla.org/)
 - [Learn with Sumit (LWS)](https://learnwithsumit.com/)
 - [Programming Hero](https://web.programming-hero.com/)
-- Community, YouTube, GitHub, and Stack Overflow
 
 ---
 
