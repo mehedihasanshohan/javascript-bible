@@ -10,3 +10,5 @@ let user = {
 };
 
 user.sayHi(); // John
+
+// If we used this.name instead of user.name inside the alert, then the code would work.
