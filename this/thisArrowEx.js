@@ -1,10 +1,10 @@
-const user = {
+const users = {
   arrowFunc: () => {
     console.log(this.name);
   }
 };
 
-user.arrowFunc();
+users.arrowFunc();
 // undefined
 // arrow function এর নিজস্ব this নেই
 // এটি parent scope (global/window) থেকে this নেয়
@@ -52,3 +52,18 @@ user3.arrowFunc();
 // undefined
 // because, declare with let makes the variable global scope
 //  but not attached with window object
+
+
+myName = "Shohan";
+
+const user = {
+  arrowFunc: () => {
+    console.log("Arrow:", this.myName);
+  },
+  normalFunc: function () {
+    console.log("Normal:", this.myName);
+  }
+};
+
+user.arrowFunc();
+user.normalFunc();
