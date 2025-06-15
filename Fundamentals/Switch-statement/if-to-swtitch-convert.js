@@ -15,9 +15,9 @@ if (a == 2 || a == 3) {
 
 
 // switch version
-let a = +prompt('a?', '');
+let b = +prompt('a?', '');
 
-switch (a) {
+switch (b) {
   case 0:
     alert( 0 );
     break;
