@@ -17,4 +17,9 @@ switch (a) {
 // Too big
 //  i dont know such values
 
+
+// n the example above we’ll see sequential execution of three alerts:
+// alert( 'Exactly!' );
+// alert( 'Too big' );
+// alert( "I don't know such values" );
 // If there is no break then the execution continues with the next case without any checks.
