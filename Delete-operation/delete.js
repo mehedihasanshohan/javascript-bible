@@ -1,15 +1,16 @@
 const products = [
-  { id: 1, name: 'ল্যাপটপ' },
-  { id: 2, name: 'মোবাইল' },
-  { id: 3, name: 'ঘড়ি' },
-  { id: 4, name: 'জুতা' },
-  { id: 5, name: 'ব্যাগ' },
+  { id: 1, name: 'A' },
+  { id: 2, name: 'B' },
+  { id: 3, name: 'C' },
+  { id: 4, name: 'D' },
+  { id: 5, name: 'E' },
 ];
+
 
 const productList = document.getElementById('product-list');
 
 function renderProducts() {
-  productList.innerHTML = ''; // আগের সব মুছে ফেল
+  productList.innerHTML = '';
   products.forEach(product => {
     const card = document.createElement('div');
     card.className = 'card';
@@ -18,8 +19,31 @@ function renderProducts() {
       <button class="delete-btn">❌ Delete</button>
     `;
 
+    card.querySelector('.delete-btn').addEventListener('click', () => {
+      deleteProduct(product.id);
+    });
+
     productList.appendChild(card);
   });
 }
 
+
+
+function deleteProduct(id) {
+  const updatedProducts = products.filter(p => p.id !== id);
+
+  products.length = 0; 
+  products.push(...updatedProducts);
+
+  renderProducts();
+}
+
 renderProducts();
+
+
+
+
+
+
+
+
