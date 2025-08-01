@@ -57,7 +57,7 @@ function renderProducts() {
   products.forEach(product => {
     const card = document.createElement('div');
     card.className = 'card';
-   card.innerHTML = `
+    card.innerHTML = `
       <div class="product-card" style="border: 1px solid #ccc; padding: 10px; border-radius: 8px; text-align: center;">
         <img src="${product.image}" alt="${product.name}" style="width: 100%; height: auto; border-radius: 6px;" />
         <h3 style="margin: 10px 0;">${product.name}</h3>
