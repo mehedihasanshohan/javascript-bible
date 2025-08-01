@@ -3,7 +3,7 @@ const books = ["JavaScript", "HTML", "CSS"];   // Array
 const age = 25;                                // Number
 const name = "Mehedi";                         // String
 const isStudent = true;                        // Boolean
-const user = { name: "Shohan", age: 22 };      // Object
+const user = { name: "Shohan", age: 26};      // Object
 const emptyList = [];                          // Empty array
 
 // Step 2: Check if each variable is an array and print a message
