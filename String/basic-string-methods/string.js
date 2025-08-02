@@ -41,3 +41,27 @@ const fruitsAll = "Apple, Banana, Apple";
 console.log(fruitsAll.replace(/Apple/g, "Mango")); // Output: "Mango, Banana, Mango"
 
 
+
+// 6.split(separator, limit)
+//  i) space
+    const spaceText = "Ami Bangladesh ke valobashi";
+    console.log(spaceText.split(" "));
+    // Output: ["Ami", "Bangladesh", "ke", "valobashi"]
+
+    // ii) character
+    const charText = "Mehedi Hasan Shohan";
+    console.log(charText.split("a"));
+    // Output: ["Mehedi H", "s", "n Shoh", "n"]
+
+    // iii) empty string (separates each character)
+    const emptytext = "hello";
+    console.log(emptytext.split(""));
+    // Output: ["h", "e", "l", "l", "o"]
+
+    // iv) pipe ( | )
+    const items = "pen|book|pencil";
+    console.log(items.split("|"));
+    // Output: ["pen", "book", "pencil"]
+
+
+
