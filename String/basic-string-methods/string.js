@@ -8,7 +8,23 @@ console.log(name.toLowerCase()); // mehedi hasan shohan
 
 // 2.Remove whitespace
 const nameWithSpaces = '   Mehedi Hasan Shohan   ';
-console.log(nameWithSpaces); // '   Mehedi Hasan Shohan   '
-console.log(nameWithSpaces.trimStart()); // 'Mehedi Hasan Shohan   '
-console.log(nameWithSpaces.trimEnd()); // '   Mehedi Hasan Shohan'
-console.log(nameWithSpaces.trim()); // 'Mehedi Hasan Shohan'
+console.log(nameWithSpaces);              // '   Mehedi Hasan Shohan   '
+console.log(nameWithSpaces.trimStart());  // 'Mehedi Hasan Shohan   '
+console.log(nameWithSpaces.trimEnd());    // '   Mehedi Hasan Shohan'
+console.log(nameWithSpaces.trim());      // 'Mehedi Hasan Shohan'
+
+// 3.includes
+const sentence = 'I love JavaScript';
+console.log(sentence.includes('love')); // true
+console.log(sentence.includes('Python')); // false
+
+// 4.slice(start, end)
+const text = 'Mehedi Hasan Shohan';
+console.log(text.slice(0, 6)); // Mehedi
+console.log(text.slice(0, 12)); // Mehedi Hasan
+console.log(text.slice(7)); // Hasan Shohan
+console.log(text.slice(12)); // Shohan
+console.log(text.slice(-6)); // Shohan
+console.log(text.slice(-12, -6)); // Hasan
+
+
