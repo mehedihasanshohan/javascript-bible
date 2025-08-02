@@ -28,3 +28,16 @@ console.log(text.slice(-6)); // Shohan
 console.log(text.slice(-12, -6)); // Hasan
 
 
+// 5. string.replace(searchValue, replaceValue)( replace() methods ignore case)
+const greeting = 'Hello World';
+console.log(greeting.replace('World', 'JavaScript')); // Hello JavaScript
+
+// only replaces the first occurrence
+const fruits = "Apple, Banana, Apple";
+console.log(fruits.replace("Apple", "Mango")); // Output: "Mango, Banana, Apple"
+
+//replace all occurrences(use regular expression with global flag)
+const fruitsAll = "Apple, Banana, Apple";
+console.log(fruitsAll.replace(/Apple/g, "Mango")); // Output: "Mango, Banana, Mango"
+
+
