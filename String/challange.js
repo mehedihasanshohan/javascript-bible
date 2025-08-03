@@ -42,3 +42,18 @@ for (let i = 0; i < textWithVowels.length; i++) {
   }
 }
 console.log(`The number of vowels in the (${textWithVowels}) is: ${vowels.length}`); // The number of vowels in the string is: 6
+
+
+
+//challenge-5: find the longest word in a string
+const mySentence = 'love JavaScript and I am learning it';
+const wordsInSentence = mySentence.split(' ');
+
+let longestWords = wordsInSentence[0];
+
+for (let  i = 0; i< wordsInSentence.length; i++) {
+  if(wordsInSentence[i].length > longestWords.length) {
+   longestWords= wordsInSentence[i];
+  }
+}
+console.log(longestWords);
