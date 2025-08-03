@@ -62,3 +62,18 @@ for (let key in myObject) {
 // key:age|type:number
 // key:city|type:string
 // key:isStudent|type:boolean
+
+
+// Task-6: loop through an object and log its keys and values.
+const profile = {
+    name: 'shohan',
+    age: 25,
+    isStdnt: true,
+}
+for (let key in profile){
+    console.log(key + ':' + profile[key]);
+}
+// Output:
+// name:shohan
+// age:25
+// isStdnt:true
