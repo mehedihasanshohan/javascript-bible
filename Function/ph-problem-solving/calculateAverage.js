@@ -1,5 +1,5 @@
 function average(phones){
-  phnTotalPrice = 0;
+  let phnTotalPrice = 0;
   for(phn of phones){
     phnTotalPrice += phn.price;
   }
