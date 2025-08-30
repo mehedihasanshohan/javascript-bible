@@ -18,3 +18,19 @@ const arr4 = [1, 2, 3, 4, 5];
 const [head, ...tail] = arr4;
 console.log(head); // 1
 console.log(tail); // [2, 3, 4, 5]
+
+// swap variables
+let m = 1, n = 2;
+[m, n] = [n, m];
+console.log(m, n); // 2 1
+
+// nested array destructuring
+const nested = [1, [2, 3]];
+const [i, [j, k]] = nested;
+console.log(i, j, k); // 1 2 3
+
+// function parameter destructuring
+function display([name, age]) {
+  console.log(`${name} is ${age}`);
+}
+display(["Alice", 25]); // Alice is 25
