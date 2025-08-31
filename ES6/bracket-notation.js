@@ -22,3 +22,34 @@ const product = {
 
 console.log(product["product name"]); // Bracket
 console.log(product["price($)"]);     // Bracket
+
+
+// numaric property
+const data = {
+  123: "test",
+  456: "hello"
+};
+
+console.log(data[123]);      // "test"  (auto converted to string)
+console.log(data["456"]);    // "hello"
+// console.log(data.123);      // Syntax Error
+
+// dynamic property access
+  const user2 = { name: "Shohan", age: 22 };
+
+let key2 = "age";
+console.log(user2[key2]); // 22
+
+
+// nested access
+const dataa = {
+  user: {
+    profile: {
+      "full name": "Mehedi Hasan Shohan"
+    }
+  }
+};
+
+console.log(dataa["user"]["profile"]["full name"]); // "Mehedi Hasan Shohan"
+console.log(dataa.user.profile["full name"]);      // "Mehedi Hasan Shohan"
+// console.log(dataa.user.profile.full name);         // Syntax Error
