@@ -62,3 +62,20 @@ function myFunc() {
 
 myFunc();
 console.log(message); // ❌ ReferenceError: message is not defined
+
+
+
+
+Global Scope
+
+Variables declared outside any function/block are accessible everywhere.
+
+Function Scope
+
+Variables declared inside a function (var, let, const) are accessible only inside that function.
+
+Block Scope
+
+let and const are block-scoped (accessible only inside { }).
+
+var ignores block scope and becomes function-scoped.
