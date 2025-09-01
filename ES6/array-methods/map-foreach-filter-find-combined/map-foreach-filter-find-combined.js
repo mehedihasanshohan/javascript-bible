@@ -21,7 +21,7 @@ const firstSuperTasty = saucyPieces.find(piece => piece.spiceLevel > 25);
 console.log('First Super Tasty Piece:', firstSuperTasty);
 
 
-// output
+// output:
 // Grill ready: Leg, Spice: 24, Sauce: Extra Saucy!
 // Grill ready: Breast, Spice: 25, Sauce: Extra Saucy!
 // Grill ready: Thigh, Spice: 28, Sauce: Extra Saucy!
