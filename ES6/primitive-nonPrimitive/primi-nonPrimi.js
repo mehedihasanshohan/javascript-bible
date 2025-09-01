@@ -1,9 +1,9 @@
 // String
 let name = "Shohan";
 let anotherName = name;
-anotherName = "Lima";
+anotherName = "Hasan";
 console.log(name);        // Shohan (original change হয় নাই)
-console.log(anotherName); // Lima
+console.log(anotherName); // Hasan
 
 // Number
 let age = 25;
@@ -61,4 +61,4 @@ function greet() {
 }
 let sayHello = greet;
 console.log(sayHello()); // Hello!
-console.log(greet === sayHello); // true (same reference) 
+console.log(greet === sayHello); // true (same reference)
