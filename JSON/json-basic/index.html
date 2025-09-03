@@ -1,12 +1,45 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    .user {
+      border: 1px solid black;
+      backdrop-filter: blur(10px);
+      margin: 10px;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow:  8px 8px 16px #1e1e28,
+        -8px -8px 16px #3c3c4c;;
+      background: #2d2d3a;
+      transition: all 0.3s ease-in-out;
+    }
+     .user:hover {
+      box-shadow:
+        inset 6px 6px 12px #1e1e28,
+        inset -6px -6px 12px #3c3c4c;
+      transform: translateY(-5px);
+    }
+    .neo-btn {
+      border-radius: 12px;
+      padding: 12px 24px;
+      background: #2d2d3a;
+      color: #fff;
+      font-weight: bold;
+      box-shadow:
+        6px 6px 12px #1e1e28,
+        -6px -6px 12px #3c3c4c;
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
 </head>
-<body>
-  <button onclick="loadPost()">
+<body class="p-10 bg-gray-800 text-white text-center">
+  <div id="users" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+  </div>
+  <button onclick="loadPost()" class="btn neo-btn p-2 bg-blue-500 text-white rounded">
     Users
   </button>
   <ul id="users">
@@ -21,14 +54,118 @@
 
     const displayPost = (datas) => {
       const usersList = document.getElementById('users');
-      datas.map(data => {
-        const li = document.createElement('li');
-        const heading = document.createElement('h1');
-        li.innerText = data.title;
-        heading.innerText = data.body;
-        usersList.appendChild(li);
-        usersList.appendChild(heading);
+      usersList.innerHTML = "";
+      datas.slice(0,12).map(data => {
+        const container = document.createElement('div');
+        container.classList.add('user');
+        container.innerHTML = `
+        <h2 class="text-lg text-rose-200">Post ID: ${data.id}</h2>
+        <h1 class="text-xl text-gray-400">${data.title}</h1>
+        <p class="text-sm mt-2 font-bold text-green-200">${data.body}</p>
+        `;
+         usersList.appendChild(container);});
+    }
+  </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neumorphism UI with Load More</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    .user {
+      border-radius: 20px;
+      padding: 20px;
+      background: #2d2d3a;
+      box-shadow:
+        8px 8px 16px #1e1e28,
+        -8px -8px 16px #3c3c4c;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .user:hover {
+      box-shadow:
+        inset 6px 6px 12px #1e1e28,
+        inset -6px -6px 12px #3c3c4c;
+      transform: translateY(-5px);
+    }
+
+    body {
+      background: #2d2d3a;
+    }
+
+    .neo-btn {
+      border-radius: 12px;
+      padding: 12px 24px;
+      background: #2d2d3a;
+      color: #fff;
+      font-weight: bold;
+      box-shadow:
+        6px 6px 12px #1e1e28,
+        -6px -6px 12px #3c3c4c;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .neo-btn:hover {
+      box-shadow:
+        inset 4px 4px 8px #1e1e28,
+        inset -4px -4px 8px #3c3c4c;
+    }
+  </style>
+</head>
+<body class="p-10 text-white text-center">
+
+  <button onclick="loadPost()" class="neo-btn mt-4">
+    Load Users
+  </button>
+
+  <div id="users" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10"></div>
+
+  <button id="loadMoreBtn" onclick="displayPost()" class="neo-btn mt-6 hidden">
+    Load More
+  </button>
+
+  <script>
+    let currentIndex = 0;
+    let posts = [];
+
+    const loadPost = () => {
+      fetch('https://jsonplaceholder.typicode.com/posts')
+        .then(response => response.json())
+        .then(data => {
+          posts = data;
+          currentIndex = 0; 
+          document.getElementById('users').innerHTML = "";
+          displayPost(); // প্রথমবার 12 টা দেখাও
+          document.getElementById('loadMoreBtn').classList.remove("hidden");
+        })
+    }
+
+    const displayPost = () => {
+      const usersList = document.getElementById('users');
+      let nextPosts = posts.slice(currentIndex, currentIndex + 12);
+
+      nextPosts.forEach(data => {
+        const container = document.createElement('div');
+        container.classList.add('user');
+        container.innerHTML = `
+          <h2 class="text-lg text-rose-200 font-semibold">Post ID: ${data.id}</h2>
+          <h1 class="text-xl text-gray-200 mt-2">${data.title}</h1>
+          <p class="text-sm mt-3 font-medium text-green-200 leading-relaxed">${data.body}</p>
+        `;
+        usersList.appendChild(container);
       });
+
+      currentIndex += 12;
+
+      if (currentIndex >= posts.length) {
+        document.getElementById('loadMoreBtn').classList.add("hidden");
+      }
     }
   </script>
 </body>
